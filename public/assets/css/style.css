@@ -1,0 +1,42 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #3158d3;
+  --danger: #c13434;
+  --ok: #2e9f62;
+  --warn: #d37d1f;
+  --bad: #cb3d30;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--primary); text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1.25rem; }
+.topbar { display:flex; justify-content:space-between; gap:1rem; padding:1rem 1.5rem; background:#111827; color:#fff; }
+.topbar nav { display:flex; gap:1rem; flex-wrap: wrap; }
+.topbar a { color:#dbe5ff; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap:1rem; }
+.two-col { grid-template-columns: 1fr 1fr; }
+.full-width { grid-column: 1 / -1; }
+.card { background:var(--card); border-radius:14px; box-shadow:0 10px 30px rgba(15,23,42,.08); padding:1rem 1.1rem; }
+.auth-card { max-width:420px; margin:7vh auto; background:var(--card); padding:1.2rem; border-radius:14px; box-shadow:0 10px 30px rgba(15,23,42,.08); }
+label { display:block; font-weight:600; margin:.65rem 0; }
+input, textarea, select, button { width:100%; margin-top:.35rem; padding:.62rem .7rem; border:1px solid #d2d8e2; border-radius:10px; font:inherit; }
+button, .button { background:var(--primary); color:white; border:none; cursor:pointer; display:inline-block; text-align:center; }
+.inline { display:inline; }
+.link { background:none; border:none; color:var(--primary); padding:0; width:auto; }
+.danger { color: var(--danger); }
+.progress { height:12px; background:#e4e8f2; border-radius:999px; overflow:hidden; }
+.progress span { display:block; height:100%; background:var(--ok); }
+.status-red .progress span { background:var(--bad); }
+.status-green .progress span { background:var(--ok); }
+.status-orange .progress span { background:var(--warn); }
+table { width:100%; border-collapse:collapse; }
+th,td { text-align:left; padding:.55rem .35rem; border-bottom:1px solid #eceff5; }
+.error { color: var(--danger); font-weight: 600; }
+.muted { color: var(--muted); }
+.split { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:center; }
+.checkbox { display:flex; align-items:center; gap:.5rem; }
+.checkbox input { width:auto; margin:0; }
+@media (max-width: 850px){ .two-col,.split{grid-template-columns:1fr;} }

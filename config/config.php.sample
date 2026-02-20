@@ -1,0 +1,16 @@
+<?php
+
+return [
+    'db' => [
+        'host' => 'localhost',
+        'port' => '3306',
+        'name' => 'phryso_data',
+        'user' => '',
+        'password' => '',
+    ],
+    'mail' => [
+        'smtp_host' => '',
+        'smtp_user' => '',
+        'smtp_pass' => '',
+    ],
+];
